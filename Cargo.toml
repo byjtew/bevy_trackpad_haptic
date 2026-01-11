@@ -7,9 +7,9 @@ repository = "https://github.com/jasonjmcghee/bevy_trackpad_haptic"
 description = "A bevy plugin for triggering trackpad haptic feedback on a mac"
 
 [dependencies]
-bevy = { version = "0.13", default-features = false }
+bevy = { version = "0.17", default-features = false }
 trackpad_haptic = "0.1.1"
-once_cell = "1.19.0"
+once_cell = "1.21.0"
 
 [[example]]
 name = "simple"
