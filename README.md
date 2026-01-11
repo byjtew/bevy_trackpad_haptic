@@ -25,10 +25,10 @@ fn main() {
 
 // Everything important
 
-fn important_system(mut feedback_event_writer: EventWriter<FeedbackEvent>) {
+fn important_system(mut feedback_event_writer: MessageWriter<FeedbackMessage>) {
     // Something happens like damage to the player!
-    feedback_event_writer.send(
-        FeedbackEvent::new(
+    feedback_event_writer.write(
+        FeedbackMessage::new(
             // length in millis
             100,
             // minimum delay before additional feedback
@@ -41,6 +41,7 @@ fn important_system(mut feedback_event_writer: EventWriter<FeedbackEvent>) {
 ## Compatibility
 | bevy | bevy_trackpad_haptic |
 |------|----------------------|
+| 0.17 | 0.2                  |
 | 0.13 | 0.1                  |
 
 ## License
